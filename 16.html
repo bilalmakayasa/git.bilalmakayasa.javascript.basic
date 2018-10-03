@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function isPalindrome(teks) {
+            let splitTeks = teks.split('');
+            let reverseTeksArray = splitTeks.reverse();
+            let joinTeksArray = reverseTeksArray.join('')
+            teks === joinTeksArray
+            if (teks === joinTeksArray) {
+                console.log('polindrom')
+
+            } else {
+                console.log('bukan palindrome')
+            }
+        }
+        let teks = window.prompt()
+        console.log(teks)
+        isPalindrome(teks)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function binaryToDecimal(bin) {
+            let result = 0;
+            let arrBin = bin.split("").reverse()
+            for (let i = 0; i < arrBin.length; i++) {
+                let a = arrBin[i]
+                result += a * Math.pow(2, i)
+            }
+            console.log(result)
+        }
+
+        function decimalToBinary(dec) {
+            let array = [];
+            while (dec !== 0) {
+                if (dec % 2 === 0) {
+                    array.push(0)
+                    dec /= 2
+                } else {
+                    array.push(1)
+                    dec = dec - 1
+                    dec /= 2
+                }
+            }
+            console.log(array.reverse())
+        }
+
+        function decimalToOcta(dec) {
+            let array = [];
+            while (dec !== 0) {
+                sisa = dec % 8
+                hasilBagi = parseInt(dec / 8)
+                dec = hasilBagi
+                array.push(sisa)
+
+            }
+            console.log(array.reverse().join(""));
+        }
+
+        function decimalToHexa(dec) {
+            let arrayTeks = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
+            let result = [];
+            while (dec !== 0) {
+                let hasil = parseInt(dec / 16)
+                let sisa = dec - (hasil * 16)
+                if (sisa > 9 && sisa < 16) {
+                    let arrIn = arrayTeks[(sisa - 9) - 1]
+                    result.push(arrIn)
+                    dec = hasil
+
+                } else {
+                    result.push(sisa)
+                    dec = hasil
+
+                }
+
+            }
+            console.log(result.reverse().join())
+        }
+    </script>
+</body>
+
+</html>

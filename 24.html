@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1">
+        <thead>
+            "FIFO"
+        </thead>
+        <tr>
+            <td colspan "2">
+                <input id="input" type="string" placeholder="Masukkan nama Barang" value="">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button id="inButton" name="In"> IN </button>
+            </td>
+            <td>
+                <button id="outButton" name="Out">OUT</button>
+            </td>
+        </tr>
+    </table>
+    <script>
+        let array = [];
+        const inButton = document.querySelector("#inButton")
+        const outButton = document.querySelector("#outButton")
+        const input = document.querySelector('#input')
+
+        inButton.addEventListener('click', () => {
+            array.unshift(input.value)
+            console.log(array)
+
+            outButton.addEventListener('click', () => {
+                array.shift()
+                console.log(array)
+            })
+        })
+    </script>
+</body>
+
+</html>

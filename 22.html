@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function kelvinToCelcius(degree) {
+            console.log(degree - 273)
+            return degree - 273
+        };
+
+        function celciusToKelvin(degree) {
+            console.log(degree + 273);
+            return degree + 273
+        };
+
+        function multipleNine(number) {
+            return number * 9 / 5
+        };
+
+        function celciusToFahrenheit(degree) {
+
+            console.log(multipleNine(degree) + 32)
+        }
+
+        function fahrenheitToCelcius(degree) {
+            let a = degree - 32
+            console.log(a)
+            return degree - 32
+        }
+
+        function kelvinToFahrenheit(degree) {
+            let a = kelvinToCelcius(degree);
+            return celciusToFahrenheit(a)
+        }
+
+        function fahrenheitToKelvin(degree) {
+            let a = fahrenheitToCelcius(degree);
+            return celciusToKelvin(a);
+        }
+    </script>
+</body>
+
+</html>
